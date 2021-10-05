@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>employees</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="form__parent-container">
+        <div class="form__label-container">
+            <p>First name:</p>
+            <p>Last name:</p>
+            <p>Date of birth:</p>
+            <p>Email address:</p>
+        </div>
+        
+        <div class="form__input-container">
+            <h1 class="form__input-header">Employees</h1>
+            <!-- table with native html validation -->
+            <form action="/insert-table.php" method="post">    
+                <p><input type="text" name="first_name" id="firstName" required> *</p>              
+                <p><input type="text" name="last_name" id="lastName" required> *</p>
+                <p><input type="date" name="dob" id="dob" required> *</p>
+                <p><input type="email" name="email" id="email" required> *</p>
+                <input class="button" type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+</body>
+  
+</html>
+
+
