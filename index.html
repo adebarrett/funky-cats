@@ -13,25 +13,34 @@
 
 <body>
 
-    <div class="form__parent-container">
-        <div class="form__label-container">
-            <p>First name:</p>
-            <p>Last name:</p>
-            <p>Date of birth:</p>
-            <p>Email address:</p>
-        </div>
-        
-        <div class="form__input-container">
-            <h1 class="form__input-header">Employees</h1>
-            <!-- table with native html validation -->
-            <form action="/insert-table.php" method="post">    
-                <p><input type="text" name="first_name" id="firstName" required> *</p>              
-                <p><input type="text" name="last_name" id="lastName" required> *</p>
-                <p><input type="date" name="dob" id="dob" required> *</p>
-                <p><input type="email" name="email" id="email" required> *</p>
-                <input class="button" type="submit" value="SUBMIT">
+    <div class="form__main-container"> 
+        <h1>Employees</h1>
+            <form action="/insert-table.php" method="post"> 
+                <div class="parent">
+                    <div class="child-a"><p>First name:</p></div>
+                    <div class="child-b"> <p><input type="text" name="first_name" id="firstName" required></p></div>
+                </div>
+
+                <div class="parent">
+                    <div class="child-a"><p>Last name:</p></div>
+                    <div class="child-b"><p><input type="text" name="last_name" id="lastName" required></p></div>
+                </div>
+
+                <div class="parent">
+                    <div class="child-a"><p>Date of birth:</p></div>
+                    <div class="child-b"><p><input type="date" name="dob" id="dob" required></p></div>
+                </div>
+
+                <div class="parent">
+                    <div class="child-a"><p>Email address:</p></div>
+                    <div class="child-b"><p><input type="email" name="email" id="email" required></p></div>
+                </div>
+
+                <div class="parent">
+                    <div class="child-a"></div>
+                    <div class="child-b"><input type="submit" value="SUBMIT"></div>
+                </div>
             </form>
-        </div>
     </div>
 
 </body>

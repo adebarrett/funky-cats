@@ -1,6 +1,7 @@
 
 body {
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 95vh;}
@@ -10,27 +11,37 @@ font-family: 'M PLUS Rounded 1c', sans-serif;
 font-weight: 700;  
 color: #126481;}
 
-.form__parent-container {
+p {font-size: 15px; padding-right: 10px;}
+
+.form__main-container {
 display: flex;
+flex-direction: column;
 justify-content: center;
+align-items: center;
 background-color: #cbf1ff;
-width: 65%;
-height: 80%;}
+width: clamp(312px, 80vw, 650px); 
+height: 450px;}
 
-.form__label-container {
+.parent {
+height: fit-content; 
+width: 100%;
 display: flex;
-flex-direction: column;
-justify-content:space-evenly;
-align-items: flex-end;
-width: 15%;
-padding: 110px 15px 120px 0;}
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-around;}
 
-.form__input-container {
+.child-a {
 display: flex;
-flex-direction: column;
-align-items:center;}
+height: 40px;
+height: 25px;
+flex: 1 1 117px;
+align-items: center;
+justify-content:right;}
 
-.form__input-header {margin-right: 25%; padding-top: 20px;}
+.child-b {
+display: flex;
+height: 70px;
+flex: 1 1 253px;}
 
 input {
 font-weight: bolder; 
@@ -39,20 +50,30 @@ color: #126481;}
 
 input[type=text], input[type=date], input[type=email] {
 padding: 15px 20px;
-width: 20rem;
 border: 1.5px solid #41b2db;}
-input[type=date] {text-transform: uppercase; width: 10rem;}
-  
+
+input[type=date] {
+text-transform: uppercase; 
+width: 150px;
+margin-right: 51px;}
+
 input[type=submit] {
 color: white;
 font-weight: bold;
 font-size: medium;
 background-color: #ea670e;
 padding: 10px 30px;
+height: 35px;
+margin-top: 20px;
 border-radius: 5px;
 border: none;
 text-decoration: none;}
-
-
-
-
+  
+@media screen and (max-width: 463px) {
+  .child-a {text-align: center;}
+  .child-a {justify-content: center;}
+  .child-b {justify-content: center; align-items: center;}
+  .form__main-container {height: 600px;}
+  input[type=date] {margin: 0; width: 201px;}
+  input[type=submit] {width: 300px;}
+}
